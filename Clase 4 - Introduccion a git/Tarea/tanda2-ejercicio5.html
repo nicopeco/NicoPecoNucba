@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./tanda1-ejercicio3-formulario.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Cargue su CV</h1>
+		<form action="">
+			<div class="input">
+				<label for="persona">Nombre y apellido: </label>
+				<input type="text" name="persona" id="persona" />
+			</div>
+			<div class="input">
+				<label for="dni">DNI: </label>
+				<input type="number" name="dni" id="dni" />
+			</div>
+			<div class="input">
+				<label for="">Género:</label>
+
+				<input type="radio" name="sexo" id="hombre" />
+				<label for="hombre">Hombre</label>
+				<input type="radio" name="sexo" id="mujer" />
+				<label for="mujer">Mujer</label>
+				<input type="radio" name="sexo" id="nc" />
+				<label for="nc">Prefiero no contestar</label>
+			</div>
+
+			<div class="input">
+				<label for="correo">Correo:</label>
+				<input type="email" name="correo" id="correo" />
+			</div>
+			<div class="input">
+				<label for="">Cargue su CV (pdf): </label>
+				<input type="file" name="" id="" />
+			</div>
+			<div class="input">
+				<input type="checkbox" name="check" id="check" />
+				<label for="check">Acepto todos los términos y condiciones.</label>
+			</div>
+
+			<div class="input">
+				<input type="button" value="Enviar" />
+			</div>
+		</form>
+	</body>
+</html>
