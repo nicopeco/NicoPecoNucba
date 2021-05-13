@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: rgb(240, 240, 240);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor-form {
+	background: white;
+	padding: 25px;
+	max-width: 500px;
+	box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form__img-contenedor {
+	/* width: 50%; */
+	/* text-align: center; */
+	clip-path: circle(35% at 50% 50%);
+}
+
+.form__img-contenedor img {
+	width: 100%;
+	/* border-radius: 100px; */
+	height: 50%;
+}
+
+.form__texto {
+	color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	font-size: 60px;
+}
+
+.form__group {
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.form__group input {
+	border: none;
+	background: none;
+
+	display: inline-block;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 30px;
+	transition: all 0.2s;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+.form__group input:focus {
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.form__email {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.form__pass {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+.button-entrar {
+	background-color: lightblue;
+	display: inline-block;
+	padding: 15px 20px;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.2s;
+	font-size: 30px;
+}
+
+.button-entrar:hover {
+	opacity: 1;
+}
+
+.button-entrar:active {
+	background: rgba(30, 144, 255, 0.8);
+}
+
+.button-pass {
+	font-size: 20px;
+	width: 75%;
+	margin: 0 auto;
+	border-radius: 100px;
+	border: 1px solid black;
+	background: white;
+	opacity: 0.8;
+	padding: 5px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.button-pass:hover {
+	opacity: 1;
+}
