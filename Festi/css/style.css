@@ -1,0 +1,271 @@
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-60rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(0.5rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(60rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-0.5rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveUpBottom {
+  0% {
+    transform: translateY(20rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes gifFadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem; }
+
+.margin-bottom-very-small {
+  margin-bottom: 1rem !important; }
+
+.margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.margin-bottom-big {
+  margin-bottom: 6rem !important; }
+
+.margin-bottom-huge {
+  margin-bottom: 8rem !important; }
+
+.bandas {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.banda {
+  width: 70%;
+  display: flex;
+  background-color: white;
+  padding: 5rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4); }
+  .banda:not(:last-child) {
+    margin-bottom: 10rem; }
+  .banda__fotos {
+    position: relative;
+    flex-grow: 1; }
+  .banda__foto {
+    width: 40%;
+    height: 20rem;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.8;
+    transition: all 0.15s; }
+    .banda__foto--1 {
+      left: 35%;
+      top: 0%; }
+    .banda__foto--2 {
+      bottom: 0%;
+      left: 0%; }
+    .banda__foto--3 {
+      bottom: 0%;
+      right: 0%; }
+    .banda__foto:hover {
+      outline: 2rem solid rgba(168, 15, 86, 0.8);
+      z-index: 1;
+      opacity: 1;
+      transform: scale(1.2); }
+  .banda__descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem; }
+    .banda__descripcion--1 {
+      width: 40%; }
+
+.container-btn {
+  text-align: center; }
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  color: blanchedalmond;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  background-color: blanchedalmond;
+  color: black;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  animation: moveUpBottom 1.5s ease-out 0.3s;
+  animation-fill-mode: backwards; }
+  .btn:link:hover,
+  .btn:visited:hover {
+    transform: translateY(-4px); }
+  .btn:link:active,
+  .btn:visited:active {
+    transform: translateY(-1px); }
+
+.form {
+  width: 50%;
+  background-color: white;
+  font-size: 2rem;
+  padding: 4rem 8rem; }
+  .form__input-grup:not(:last-child) {
+    margin-bottom: 4rem;
+    width: 100%; }
+  .form label {
+    display: block; }
+  .form input {
+    font-size: 2rem;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    transition: all 0.2s; }
+    .form input:focus {
+      outline: none;
+      border-bottom: 2px solid green; }
+  .form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 350px;
+    border: 2px solid black;
+    transition: all 0.2s; }
+    .form textarea:focus {
+      outline: none;
+      border: 2px solid green; }
+
+.gif__container {
+  display: inline-block;
+  animation: gifFadeIn 2s;
+  animation-fill-mode: backwards; }
+
+.servicios__cont {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; }
+
+.servicios__serv {
+  width: 18%;
+  background-color: #ccc;
+  box-shadow: 0 1.5rem 3rem rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
+  cursor: pointer; }
+  .servicios__serv:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 3rem 6rem rgba(255, 255, 255, 0.3); }
+
+.servicios__img-cont {
+  width: 100%;
+  height: 20rem; }
+
+.servicios__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.heading-h4 {
+  height: 20%;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1; }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hero.jpg);
+  background-size: cover;
+  position: relative; }
+  .header__titles-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .header__h1 {
+    text-align: center; }
+    .header__h1 span {
+      display: inline-block;
+      width: 100%;
+      color: rgba(255, 235, 205, 0.8); }
+    .header__h1--main {
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      font-size: 8rem;
+      animation: moveInLeft 3s cubic-bezier(0.18, 0.64, 0.27, 1.05); }
+    .header__h1--sec {
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      font-weight: 400;
+      font-size: 2.5rem;
+      animation: moveInRight 3s cubic-bezier(0.18, 0.64, 0.27, 1.05); }
+  .header .arrow {
+    color: white; }
+
+.navigation {
+  position: fixed;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; }
+  .navigation__list {
+    list-style: none;
+    background-color: blanchedalmond;
+    padding: 1.5rem 3rem; }
+  .navigation__item {
+    display: inline-block; }
+    .navigation__item:not(:last-child) {
+      margin-right: 3rem; }
+  .navigation__link:link, .navigation__link:visited {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s; }
+    .navigation__link:link:hover, .navigation__link:visited:hover {
+      color: #e51245; }
+    .navigation__link:link:active, .navigation__link:visited:active {
+      color: rgba(229, 18, 69, 0.5); }
+
+.bandas {
+  padding: 20rem 0;
+  background-color: #ccc; }
+
+.servicios {
+  padding: 15rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/servicios.jpg);
+  background-size: 100%;
+  background-position: bottom; }
+
+.section-form {
+  padding: 15rem 0;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
