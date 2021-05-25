@@ -160,6 +160,25 @@ body {
     .form textarea:focus {
       outline: none;
       border: 2px solid green; }
+  .form__input-grup--btn {
+    text-align: center; }
+  .form__btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background: none;
+    border: none;
+    background-image: linear-gradient(to right bottom, blanchedalmond, pink);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+    font-size: 2rem;
+    border-radius: 10px;
+    transition: all 0.2s;
+    cursor: pointer; }
+    .form__btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4); }
+    .form__btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 2rem 4.5rem rgba(0, 0, 0, 0.4); }
 
 .gif__container {
   display: inline-block;
