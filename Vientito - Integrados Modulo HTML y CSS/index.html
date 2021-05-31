@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="navigation">
+				<div class="navigation__logo-box">
+					<img src="img/logonav.png" alt="Logo" class="navigation__logo" />
+				</div>
+				<ul class="navigation__list">
+					<li class="navigation__item"><a href="#" class="navigation__link">Inicio</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Categorías</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Contacto</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Sobre Nosotros</a></li>
+				</ul>
+				<div class="navigation__buttons">
+					<button class="btn btn--singup">Registrarse</button>
+					<button class="btn btn--login">Log In</button>
+				</div>
+			</nav>
+			<div class="u-text-center">
+				<h1 class="heading-primary">Equipo de montaña biem peola</h1>
+			</div>
+
+			<div class="slider">
+				<div class="slider__content">
+					<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="http://lorempixel.com/800/300" class="d-block w-100" />
+							</div>
+							<div class="carousel-item">
+								<img src="http://lorempixel.com/800/300" class="d-block w-100" />
+							</div>
+							<div class="carousel-item">
+								<img src="http://lorempixel.com/800/300" class="d-block w-100" />
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleControls"
+							data-bs-slide="prev"
+						>
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleControls"
+							data-bs-slide="next"
+						>
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					<form class="buscador">
+						<div class="buscador__input-group">
+							<label for="prod">Producto</label>
+							<input type="text" id="prod" />
+						</div>
+						<div class="buscador__input-group">
+							<label for="preciomax">Precio máximo</label>
+							<input type="number" id="preciomax" />
+						</div>
+						<div class="buscador__input-group buscador__input-group--btn">
+							<button class="buscador__btn"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="section-categorias">
+				<div class="row">
+					<div class="col-1-of-4"></div>
+					<div class="col-1-of-4"></div>
+					<div class="col-1-of-4"></div>
+					<div class="col-1-of-4"></div>
+				</div>
+			</section>
+		</main>
+	</body>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"
+	></script>
+</html>
