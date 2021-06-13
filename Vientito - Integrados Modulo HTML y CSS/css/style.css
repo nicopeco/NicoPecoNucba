@@ -25,11 +25,23 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 60%; } }
 
 body {
   box-sizing: border-box;
   padding: 5rem;
   font-family: 'Lato', sans-serif; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .heading-primary {
   font-family: 'Lobster', cursive;
@@ -37,6 +49,9 @@ body {
   font-size: 6rem;
   color: #354568;
   font-weight: 700; }
+  @media only screen and (max-width: 43.75em) {
+    .heading-primary {
+      font-size: 5rem; } }
 
 .biem-peola {
   border-bottom: 4px solid #354568; }
@@ -46,6 +61,9 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1rem; }
+  @media only screen and (max-width: 43.75em) {
+    .heading-secondary {
+      font-size: 4rem; } }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -113,13 +131,27 @@ body {
     width: 60%;
     position: relative;
     transform: translateY(-4rem); }
+    @media only screen and (max-width: 56.25em) {
+      .slider__content {
+        width: 80%; } }
 
 .carousel-inner {
   border-radius: 10px !important; }
+  @media only screen and (max-width: 62.5em) {
+    .carousel-inner {
+      border-radius: 0px !important;
+      border-top-left-radius: 10px !important;
+      border-top-right-radius: 10px !important; } }
 
 .carousel-item {
-  height: 55rem;
+  height: 55em;
   position: relative; }
+  @media only screen and (max-width: 75em) {
+    .carousel-item {
+      height: 45em; } }
+  @media only screen and (max-width: 37.5em) {
+    .carousel-item {
+      height: 35em; } }
 
 .overlay-image {
   position: absolute;
@@ -143,11 +175,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 62.5em) {
+    .buscador {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      padding: 3.25rem 7.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .buscador {
+      flex-direction: column;
+      padding: 2.5rem 5rem; } }
   .buscador__input-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 30%; }
+    @media only screen and (max-width: 37.5em) {
+      .buscador__input-group {
+        width: 100%; }
+        .buscador__input-group:not(:last-child) {
+          margin-bottom: 2rem; } }
     .buscador__input-group label {
       font-size: 1.4rem;
       font-weight: 700;
@@ -186,6 +237,15 @@ body {
   border-radius: 10px;
   text-align: center;
   transition: all 0.4s; }
+  @media only screen and (max-width: 62.5em) {
+    .carta {
+      width: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    .carta {
+      width: 70%; } }
+  @media only screen and (max-width: 43.75em) {
+    .carta {
+      width: 80%; } }
   .carta__img {
     height: 100%;
     width: 100%;
@@ -194,6 +254,9 @@ body {
     border-top-right-radius: 10px; }
   .carta__img-box {
     height: 10em; }
+    @media only screen and (max-width: 56.25em) {
+      .carta__img-box {
+        height: 20em; } }
   .carta__details {
     padding: 2rem 4rem; }
     .carta__details p {
@@ -209,6 +272,12 @@ body {
   padding: 6rem 4rem 3rem 4rem;
   font-size: 1.8rem;
   border-radius: 5px; }
+  @media only screen and (max-width: 56.25em) {
+    .form {
+      width: 80%; } }
+  @media only screen and (max-width: 43.75em) {
+    .form {
+      width: 90%; } }
   .form__group {
     position: relative; }
     .form__group:not(:last-of-type) {
@@ -249,6 +318,15 @@ body {
   margin: 0 auto; }
   .row--carta {
     max-width: 140rem; }
+    @media only screen and (max-width: 62.5em) {
+      .row--carta {
+        display: flex;
+        justify-content: space-around;
+        align-content: space-around; } }
+    @media only screen and (max-width: 56.25em) {
+      .row--carta {
+        flex-direction: column;
+        align-items: center; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
     @media only screen and (max-width: 56.25em) {
@@ -256,23 +334,26 @@ body {
         margin-bottom: 6rem; } }
   @media only screen and (max-width: 56.25em) {
     .row {
-      max-width: 50rem;
       padding: 0 3rem; } }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class^='col-'] {
-    float: left; }
-    .row [class^='col-']:not(:last-child) {
-      margin-right: 6rem; }
-      @media only screen and (max-width: 56.25em) {
-        .row [class^='col-']:not(:last-child) {
-          margin-right: 0;
-          margin-bottom: 6rem; } }
-    @media only screen and (max-width: 56.25em) {
-      .row [class^='col-'] {
-        width: 100% !important; } }
+  @media only screen and (max-width: 62.5em) {
+    .row [class^='col-'] {
+      flex: 0 0 50%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; } }
+  @media only screen and (max-width: 56.25em) {
+    .row [class^='col-'] {
+      width: 40%; } }
+  .row [class^='col-']:not(:last-child) {
+    margin-right: 6rem; }
+    @media only screen and (max-width: 62.5em) {
+      .row [class^='col-']:not(:last-child) {
+        margin: 0;
+        padding: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .row [class^='col-'] {
+      width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -286,18 +367,31 @@ body {
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
+@media only screen and (max-width: 56.25em) {
+  .special-class {
+    margin-top: 6rem !important; } }
+
 .header {
   background-color: #e2e4e8;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   height: 115vh;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%); }
+  padding: 0 0 110rem 0;
+  position: relative; }
 
 .navigation {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 2rem; }
+  @media only screen and (max-width: 75em) {
+    .navigation {
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 56.25em) {
+    .navigation {
+      justify-content: center; }
+      .navigation > *:not(:last-child) {
+        margin-right: 4rem; } }
   .navigation__logo {
     width: 20rem;
     transition: transform 1s; }
@@ -308,13 +402,33 @@ body {
     font-size: 1.8rem;
     display: flex;
     margin-top: 2rem; }
+    @media only screen and (max-width: 75em) {
+      .navigation__list {
+        flex: 0 0 100%;
+        order: 1;
+        padding-left: 0;
+        margin-top: 4rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .navigation__list {
+        flex-direction: column;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-top: 2rem;
+        align-items: center; } }
   .navigation__item {
-    display: inline-block;
     cursor: pointer;
     padding-bottom: 0.5rem;
     position: relative; }
     .navigation__item:not(:last-child) {
       margin-right: 8rem; }
+    @media only screen and (max-width: 75em) {
+      .navigation__item {
+        flex: 1;
+        text-align: center; } }
+    @media only screen and (max-width: 43.75em) {
+      .navigation__item {
+        margin: 0 !important;
+        padding: 1rem 2rem; } }
     .navigation__item::after {
       content: '';
       display: block;
@@ -346,7 +460,9 @@ body {
   background-color: #e2e4e8;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem; }
   .footer h3 {
     color: #354568;
     font-size: 2rem;
@@ -376,13 +492,66 @@ body {
     .redes__red--facebook:hover {
       fill: #3b5998; }
 
+#jambur {
+  display: none; }
+
+.jambur {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .jambur {
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      width: 80px;
+      height: 80px;
+      background-color: orangered;
+      cursor: pointer;
+      border-radius: 50%; } }
+  .jambur__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .jambur__icon {
+    width: 40%;
+    height: 1px;
+    background-color: black; }
+  .jambur__icon::after, .jambur__icon::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: black; }
+  .jambur__icon::after {
+    top: 2rem; }
+
+.nav-jambur {
+  display: none; }
+
 .section-quienes-somos {
-  margin-top: -18rem;
+  margin-top: -10rem;
   padding: 20rem 0 30rem 0;
+  transform: skewY(-7deg);
   background-image: linear-gradient(to right bottom, rgba(53, 69, 104, 0.95), rgba(53, 69, 104, 0.95)), url("../img/montania.jpg");
   background-size: cover;
   background-position: top;
   color: #f7f7f7; }
+  .section-quienes-somos > * {
+    transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-quienes-somos {
+      margin-top: -30rem;
+      padding: 10rem 5rem 30rem 5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .section-quienes-somos {
+      margin-top: -25rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .section-quienes-somos {
+      margin-top: -40rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .section-quienes-somos {
+      margin-top: -30rem; } }
 
 .section-categorias {
   padding: 15rem 0 25rem 0;
@@ -393,6 +562,9 @@ body {
     transform: skewY(7deg); }
   .section-categorias h2 {
     color: #354568; }
+  @media only screen and (max-width: 62.5em) {
+    .section-categorias {
+      padding: 15rem 0 15rem 0; } }
 
 .section-form {
   padding: 30rem 0 15rem 0;
@@ -400,3 +572,85 @@ body {
   margin-top: -12rem; }
   .section-form h2 {
     color: white; }
+  @media only screen and (max-width: 62.5em) {
+    .section-form {
+      padding: 20rem 0 15rem 0; } }
+
+.formulario-login__body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; }
+  .formulario-login__body button {
+    font-size: 2rem !important;
+    font-weight: 700; }
+
+.formulario-login__contenedor {
+  padding: 3rem;
+  width: 60rem;
+  height: 80%;
+  background-color: #e2e4e8;
+  border-radius: 10px;
+  border: 2px solid #354568; }
+  @media only screen and (max-width: 75em) {
+    .formulario-login__contenedor {
+      height: auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .formulario-login__contenedor {
+      min-width: 80%;
+      width: 80%; } }
+
+.formulario-login__img-box {
+  text-align: center; }
+
+.formulario-login__input-group:not(:last-of-type) {
+  margin-bottom: 6rem; }
+
+.formulario-login__input-group--btn {
+  text-align: center; }
+
+.formulario-login__input {
+  width: 100%;
+  padding: 2rem 1rem;
+  font-size: 1.6rem !important;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: all 0.2s;
+  border-radius: 5px; }
+  .formulario-login__input:focus {
+    outline: none;
+    border-bottom: 2px solid #354568; }
+  .formulario-login__input:invalid {
+    border-bottom: 2px solid red; }
+
+.formulario-login__links-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+  align-items: center; }
+
+.formulario-login__link:not(:last-child) {
+  margin-bottom: 3rem; }
+
+.formulario-login__link--olvide {
+  font-size: 1.8rem !important;
+  color: #354568;
+  text-decoration: none; }
+  .formulario-login__link--olvide:hover {
+    color: black; }
+
+.formulario-login__link--nueva {
+  font-size: 1.8rem !important;
+  padding: 1rem 2rem;
+  background-color: rgba(242, 148, 17, 0.6);
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.2s; }
+  .formulario-login__link--nueva:hover {
+    background-color: rgba(242, 148, 17, 0.75); }
+  .formulario-login__link--nueva:active {
+    background-color: #f29411; }

@@ -22,21 +22,33 @@
 	</head>
 	<body>
 		<header class="header">
+			<!-- <input type="checkbox" id="jambur" />
+			<label for="jambur" class="jambur"><span class="jambur__icon"></span></label>
+
+			<ul class="nav-jambur">
+				<li class="nav-jambur__item"><a href="#" class="nav-jambur__link">Inicio</a></li>
+				<li class="nav-jambur__item"><a href="#" class="nav-jambur__link">Categorías</a></li>
+				<li class="nav-jambur__item"><a href="#" class="nav-jambur__link">Contacto</a></li>
+				<li class="nav-jambur__item"><a href="#" class="nav-jambur__link">Sobre Nosotros</a></li>
+			</ul> -->
+
 			<nav class="navigation">
 				<div class="navigation__logo-box">
 					<img src="img/logonav.png" alt="Logo" class="navigation__logo" />
 				</div>
 				<ul class="navigation__list">
 					<li class="navigation__item"><a href="#" class="navigation__link">Inicio</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Categorías</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Contacto</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Sobre Nosotros</a></li>
+					<li class="navigation__item"><a href="#quienes" class="navigation__link">Quiénes somos</a></li>
+					<li class="navigation__item"><a href="#categorias" class="navigation__link">Categorías</a></li>
+					<li class="navigation__item"><a href="#form" class="navigation__link">Contacto</a></li>
 				</ul>
 				<div class="navigation__buttons">
-					<button class="btn btn--singup">Registrarse</button>
-					<button class="btn btn--login">Log In</button>
+					<a href="#" class="btn btn--singup">Registrarse</a>
+
+					<a href="login.html" class="btn btn--login">Log In</a>
 				</div>
 			</nav>
+
 			<div class="u-text-center">
 				<h1 class="heading-primary">Equipo de montaña <span class="biem-peola">biem peola</span></h1>
 			</div>
@@ -98,7 +110,7 @@
 			</div>
 		</header>
 		<main>
-			<section class="section-quienes-somos">
+			<section class="section-quienes-somos" id="quienes">
 				<div class="row">
 					<h2 class="heading-secondary u-text-center u-margin-bottom-big">Quienes somos</h2>
 					<p class="paragraph">
@@ -122,10 +134,10 @@
 				</div>
 			</section>
 
-			<section class="section-categorias">
+			<section class="section-categorias" id="categorias">
 				<h2 class="heading-secondary u-text-center u-margin-bottom-huge">Nuestros productos</h2>
 				<div class="row row--carta">
-					<div class="col-1-of-4">
+					<div class="col-1-of-4 u-margin-bottom-big">
 						<div class="carta">
 							<div class="carta__img-box">
 								<img src="../img/tent.jpg" alt="" class="carta__img u-margin-bottom-small" />
@@ -133,25 +145,23 @@
 							<div class="carta__details">
 								<h3 class="heading-tertiary u-text-center u-margin-bottom-small">Carpas</h3>
 								<p class="u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-									consectetur adipisicing.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
 								</p>
-								<a href="#" class="btn btn--login">Comprar</a>
+								<a href="#" class="btn btn--login">Buscar</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-1-of-4">
+					<div class="col-1-of-4 u-margin-bottom-big">
 						<div class="carta">
 							<div class="carta__img-box">
 								<img src="../img/chair.jpg" alt="" class="carta__img u-margin-bottom-small" />
 							</div>
 							<div class="carta__details">
-								<h3 class="heading-tertiary u-text-center u-margin-bottom-small">Carpas</h3>
+								<h3 class="heading-tertiary u-text-center u-margin-bottom-small">Sillas</h3>
 								<p class="u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-									consectetur adipisicing.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
 								</p>
-								<a href="#" class="btn btn--login">Sillas</a>
+								<a href="#" class="btn btn--login">Buscar</a>
 							</div>
 						</div>
 					</div>
@@ -163,32 +173,30 @@
 							<div class="carta__details">
 								<h3 class="heading-tertiary u-text-center u-margin-bottom-small">Mesas</h3>
 								<p class="u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-									consectetur adipisicing.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
 								</p>
-								<a href="#" class="btn btn--login">Comprar</a>
+								<a href="#" class="btn btn--login">Buscar</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-1-of-4">
+					<div class="col-1-of-4 special-class">
 						<div class="carta">
 							<div class="carta__img-box">
 								<img src="../img/lamp.jpg" alt="" class="carta__img u-margin-bottom-small" />
 							</div>
 							<div class="carta__details">
-								<h3 class="heading-tertiary u-text-center u-margin-bottom-small">Lámparas</h3>
+								<h3 class="heading-tertiary u-text-center u-margin-bottom-small">Lamps</h3>
 								<p class="u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-									consectetur adipisicing.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
 								</p>
-								<a href="#" class="btn btn--login">Comprar</a>
+								<a href="#" class="btn btn--login">Buscar</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section-form">
+			<section class="section-form" id="form">
 				<h2 class="heading-secondary u-text-center u-margin-bottom-huge">contactanos!</h2>
 				<div class="u-text-center">
 					<div class="form">
